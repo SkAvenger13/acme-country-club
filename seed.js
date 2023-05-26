@@ -1,4 +1,4 @@
-const {db, Member, Facility, Booking} = require('./db');
+const {db, Member, Facility, Booking} = require('./api/db');
 
 const syncAndSeed = async () => {
     try {

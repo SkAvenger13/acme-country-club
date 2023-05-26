@@ -46,7 +46,7 @@ const Booking = db.define('booking', {
 Member.belongsTo(Member, {as: 'sponsor'});
 Member.hasMany(Member, {as: 'sponsee', foreignKey: 'sponsorId'});
 
-Booking.belongsTo(Member);
+Booking.belongsTo(Member, {as: 'booker'});
 Member.hasMany(Booking, {foreignKey: 'bookerId'});
 
 Booking.belongsTo(Facility);
