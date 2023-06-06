@@ -1,8 +1,10 @@
 const express = require('express');
 const server = express();
 const PORT = 8000;
+const syncAndSeed = require('../seed');
 const {Member, Facility, Booking} = require('./db');
 
+syncAndSeed();
 
 server.use(express.json());
 
